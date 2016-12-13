@@ -1,6 +1,7 @@
 package org.dcxz.designdigger.activity;
 
 import android.os.Message;
+import android.util.Log;
 import android.widget.ImageView;
 
 import com.android.volley.Response;
@@ -39,18 +40,20 @@ public class Activity_Slash extends Framework_Activity {
 
     @Override
     protected void initData() {
-        App.requst(
+        App.request(
                 Util_DribbbleAPI.END_POINT_SHOTS,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+                        Log.i(TAG, "onResponse: " + response);
                     }
                 }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-
+                        error.printStackTrace();
                     }
                 });
+
     }
 
     @Override
