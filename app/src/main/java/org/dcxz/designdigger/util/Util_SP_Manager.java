@@ -24,15 +24,15 @@ public class Util_SP_Manager {
      */
     public static final String IS_NOT_FIRST_LAUNCH = "IS_NOT_FIRST_LAUNCH";
 
-    private Util_SP_Manager() {
+    private Util_SP_Manager(Context context) {
+        preferences = context.getSharedPreferences("DesignDiggerConfig", Context.MODE_PRIVATE);
     }
 
     public static Util_SP_Manager getInstance(Context context) {
         if (instance == null) {
             synchronized (Util_SP_Manager.class) {
                 if (instance == null) {
-                    instance = new Util_SP_Manager();
-                    preferences = context.getSharedPreferences("DesignDiggerConfig", Context.MODE_PRIVATE);
+                    instance = new Util_SP_Manager(context);
                 }
             }
         }
