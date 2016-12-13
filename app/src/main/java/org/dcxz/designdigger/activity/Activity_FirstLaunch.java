@@ -58,7 +58,7 @@ public class Activity_FirstLaunch extends Framework_Activity {
         if (manager.getBoolean(Util_SP_Manager.IS_NOT_FIRST_LAUNCH)) {
             handler.sendEmptyMessage(TO_SLASH_ACTIVITY);
         }
-        manager.putBoolean(Util_SP_Manager.IS_NOT_FIRST_LAUNCH,true);
+        manager.putBoolean(Util_SP_Manager.IS_NOT_FIRST_LAUNCH, true);
         indicators = new ImageView[count];
         indicators[0] = (ImageView) findViewById(R.id.firstLaunch_indicator1);
         indicators[0].setSelected(true);
@@ -118,6 +118,9 @@ public class Activity_FirstLaunch extends Framework_Activity {
                     iv.setSelected(false);
                 }
                 indicators[position].setSelected(true);
+                if ((count - 1) == position) {
+                    handler.sendEmptyMessageDelayed(TO_SLASH_ACTIVITY, 2000);
+                }
             }
 
             @Override
