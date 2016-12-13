@@ -96,7 +96,7 @@ public abstract class Framework_Activity extends AppCompatActivity {
      *
      * @param c 将要前往的Activity
      */
-    protected void startActivity(Class<Framework_Activity> c) {
+    protected void startActivity(Class<? extends Framework_Activity> c) {
         startActivity(new Intent(this, c));
     }
 
@@ -106,7 +106,7 @@ public abstract class Framework_Activity extends AppCompatActivity {
      * @param c            将要前往的Activity
      * @param serializable 需要传递的Serializable对象
      */
-    protected void startActivity(Class<Framework_Activity> c, Serializable serializable) {
+    protected void startActivity(Class<? extends Framework_Activity> c, Serializable serializable) {
         Intent intent = new Intent(this, c);
         intent.putExtra(SERIALIZABLE, serializable);
         startActivity(intent);
@@ -118,7 +118,7 @@ public abstract class Framework_Activity extends AppCompatActivity {
      * @param c     将要前往的Activity
      * @param state 需要传递的状态信息
      */
-    protected void startActivity(Class<Framework_Activity> c, String state) {
+    protected void startActivity(Class<? extends Framework_Activity> c, String state) {
         Intent intent = new Intent(this, c);
         intent.putExtra(STATE, state);
         startActivity(intent);
