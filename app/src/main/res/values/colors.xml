@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+
+    <!--默认主题-->
+    <color name="default_1">#FDFEFE</color>
+    <color name="default_2">#CFD5D9</color>
+    <color name="default_3">#C9BAB0</color>
+    <color name="default_4">#87D2EE</color>
+    <color name="default_5">#01B0EF</color>
+    <color name="default_6">#79909E</color>
+    <color name="default_7">#323F4C</color>
+
 </resources>
