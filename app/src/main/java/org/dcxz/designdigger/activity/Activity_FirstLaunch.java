@@ -134,6 +134,7 @@ public class Activity_FirstLaunch extends Framework_Activity {
     public void handleMessageImp(Message msg) {
         if (msg.what == TO_SLASH_ACTIVITY) {
             startActivity(Activity_Slash.class);//父类的包装方法
+            finish();
         }
     }
 }
