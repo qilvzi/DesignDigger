@@ -46,6 +46,9 @@ public class Activity_Slash extends Framework_Activity {
                     @Override
                     public void onResponse(String response) {
                         Log.i(TAG, "onResponse: " + response);
+
+
+
                     }
                 }, new Response.ErrorListener() {
                     @Override
